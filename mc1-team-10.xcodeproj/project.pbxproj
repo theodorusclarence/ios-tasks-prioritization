@@ -10,6 +10,9 @@
 		1111927527FEC3A40035BD62 /* MyTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111927427FEC3A40035BD62 /* MyTaskViewController.swift */; };
 		1111927827FEC5040035BD62 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111927727FEC5040035BD62 /* TaskTableViewCell.swift */; };
 		1111927B27FEC93E0035BD62 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111927A27FEC93E0035BD62 /* Task.swift */; };
+		1111927E27FF09BA0035BD62 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111927D27FF09BA0035BD62 /* OnboardingViewController.swift */; };
+		1111928027FF0D530035BD62 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111927F27FF0D530035BD62 /* OnboardingSlide.swift */; };
+		1111928227FF0D8F0035BD62 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111928127FF0D8F0035BD62 /* OnboardingCollectionViewCell.swift */; };
 		11D9DCB227FC2FDE00A466F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9DCB127FC2FDE00A466F2 /* AppDelegate.swift */; };
 		11D9DCB427FC2FDE00A466F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9DCB327FC2FDE00A466F2 /* SceneDelegate.swift */; };
 		11D9DCB627FC2FDE00A466F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9DCB527FC2FDE00A466F2 /* ViewController.swift */; };
@@ -22,6 +25,9 @@
 		1111927427FEC3A40035BD62 /* MyTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTaskViewController.swift; sourceTree = "<group>"; };
 		1111927727FEC5040035BD62 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		1111927A27FEC93E0035BD62 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		1111927D27FF09BA0035BD62 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		1111927F27FF0D530035BD62 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		1111928127FF0D8F0035BD62 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		11D9DCAE27FC2FDE00A466F2 /* mc1-team-10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mc1-team-10.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11D9DCB127FC2FDE00A466F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11D9DCB327FC2FDE00A466F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +52,7 @@
 		1111927227FEC37E0035BD62 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1111927C27FF09A60035BD62 /* Onboarding */,
 				1111927327FEC38B0035BD62 /* MyTask */,
 			);
 			path = Views;
@@ -71,8 +78,18 @@
 			isa = PBXGroup;
 			children = (
 				1111927A27FEC93E0035BD62 /* Task.swift */,
+				1111927F27FF0D530035BD62 /* OnboardingSlide.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1111927C27FF09A60035BD62 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				1111927D27FF09BA0035BD62 /* OnboardingViewController.swift */,
+				1111928127FF0D8F0035BD62 /* OnboardingCollectionViewCell.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		11D9DCA527FC2FDE00A466F2 = {
@@ -183,8 +200,11 @@
 				11D9DCB627FC2FDE00A466F2 /* ViewController.swift in Sources */,
 				1111927827FEC5040035BD62 /* TaskTableViewCell.swift in Sources */,
 				11D9DCB227FC2FDE00A466F2 /* AppDelegate.swift in Sources */,
+				1111928027FF0D530035BD62 /* OnboardingSlide.swift in Sources */,
+				1111927E27FF09BA0035BD62 /* OnboardingViewController.swift in Sources */,
 				1111927B27FEC93E0035BD62 /* Task.swift in Sources */,
 				11D9DCB427FC2FDE00A466F2 /* SceneDelegate.swift in Sources */,
+				1111928227FF0D8F0035BD62 /* OnboardingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -57,7 +57,8 @@ class MyTaskViewController: UIViewController {
 
 extension MyTaskViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You tapped me!")
+        print("You tapped me! \(filteredTasks[indexPath.row].taskName)")
+        print("status \(filteredTasks[indexPath.row].status)")
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
