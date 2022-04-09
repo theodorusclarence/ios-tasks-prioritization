@@ -12,6 +12,7 @@ class MyTaskViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var sectionControl: UISegmentedControl!
+    @IBOutlet weak var addButton: UIButton!
     
     var tasks: [Task] = [
         Task(taskName: "Makan", dueDate: "Due 2 January 2022", status: .finished),
@@ -39,14 +40,11 @@ class MyTaskViewController: UIViewController {
         navbarTitle.font = UIFont.systemFont(ofSize: 34, weight: .bold)
         navbarTitle.text = "My Tasks"
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: navbarTitle)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(self.openAddTaskModal))
     }
     
-    @objc func openAddTaskModal(){
-        let controller = storyboard?.instantiateViewController(withIdentifier:"AddTaskVC")as! UIViewController
-        self.present(controller, animated: true, completion: nil)
-        
+    @IBAction func addButtonClicked(_ sender: Any) {
+        let controller = storyboard?.instantiateViewController(withIdentifier:"AddTaskVC")
+        self.present(controller!, animated: true, completion: nil)
     }
     
     @IBAction func sectionChanged(_ sender: UISegmentedControl) {
