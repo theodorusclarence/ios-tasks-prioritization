@@ -25,30 +25,43 @@ class MyTaskViewController: UIViewController {
     ]
     
     var filteredTasks: [Task] = []
+    let navbarTitle = UILabel()
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        
         tableView.delegate = self
         tableView.dataSource = self
         
         filteredTasks = tasks
+        
+        navbarTitle.font = UIFont.systemFont(ofSize: 34, weight: .bold)
+        navbarTitle.text = "My Tasks"
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: navbarTitle)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(self.openAddTaskModal))
+    }
+    
+    @objc func openAddTaskModal(){
+        let controller = storyboard?.instantiateViewController(withIdentifier:"AddTaskVC")as! UIViewController
+        self.present(controller, animated: true, completion: nil)
+        
     }
     
     @IBAction func sectionChanged(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
-            case 0:
-                filteredTasks = tasks
+        case 0:
+            filteredTasks = tasks
             // Unlisted
-            case 1:
-                filteredTasks = tasks.filter {$0.status == .unlisted }
+        case 1:
+            filteredTasks = tasks.filter {$0.status == .unlisted }
             // Finished
-            case 2:
-                filteredTasks = tasks.filter {$0.status == .finished }
-                
-            default:
-                filteredTasks = tasks
+        case 2:
+            filteredTasks = tasks.filter {$0.status == .finished }
+            
+        default:
+            filteredTasks = tasks
         }
         tableView.reloadData()
     }
@@ -62,8 +75,8 @@ extension MyTaskViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return 68
-        }
+        return 68
+    }
 }
 
 extension MyTaskViewController: UITableViewDataSource {

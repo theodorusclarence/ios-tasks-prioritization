@@ -13,6 +13,7 @@
 		1111927E27FF09BA0035BD62 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111927D27FF09BA0035BD62 /* OnboardingViewController.swift */; };
 		1111928027FF0D530035BD62 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111927F27FF0D530035BD62 /* OnboardingSlide.swift */; };
 		1111928227FF0D8F0035BD62 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111928127FF0D8F0035BD62 /* OnboardingCollectionViewCell.swift */; };
+		1111928528003B5C0035BD62 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111928428003B5C0035BD62 /* AddTaskViewController.swift */; };
 		11D9DCB227FC2FDE00A466F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9DCB127FC2FDE00A466F2 /* AppDelegate.swift */; };
 		11D9DCB427FC2FDE00A466F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9DCB327FC2FDE00A466F2 /* SceneDelegate.swift */; };
 		11D9DCB627FC2FDE00A466F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9DCB527FC2FDE00A466F2 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 		1111927D27FF09BA0035BD62 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		1111927F27FF0D530035BD62 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		1111928127FF0D8F0035BD62 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		1111928428003B5C0035BD62 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		11D9DCAE27FC2FDE00A466F2 /* mc1-team-10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mc1-team-10.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11D9DCB127FC2FDE00A466F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11D9DCB327FC2FDE00A466F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 		1111927227FEC37E0035BD62 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1111928328003B3C0035BD62 /* Add Task */,
 				1111927C27FF09A60035BD62 /* Onboarding */,
 				1111927327FEC38B0035BD62 /* MyTask */,
 			);
@@ -90,6 +93,14 @@
 				1111928127FF0D8F0035BD62 /* OnboardingCollectionViewCell.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		1111928328003B3C0035BD62 /* Add Task */ = {
+			isa = PBXGroup;
+			children = (
+				1111928428003B5C0035BD62 /* AddTaskViewController.swift */,
+			);
+			path = "Add Task";
 			sourceTree = "<group>";
 		};
 		11D9DCA527FC2FDE00A466F2 = {
@@ -205,6 +216,7 @@
 				1111927B27FEC93E0035BD62 /* Task.swift in Sources */,
 				11D9DCB427FC2FDE00A466F2 /* SceneDelegate.swift in Sources */,
 				1111928227FF0D8F0035BD62 /* OnboardingCollectionViewCell.swift in Sources */,
+				1111928528003B5C0035BD62 /* AddTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +363,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CD3LJB88Z9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "mc1-team-10/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -378,6 +391,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CD3LJB88Z9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "mc1-team-10/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
