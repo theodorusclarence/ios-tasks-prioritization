@@ -14,6 +14,9 @@
 		1111928027FF0D530035BD62 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111927F27FF0D530035BD62 /* OnboardingSlide.swift */; };
 		1111928227FF0D8F0035BD62 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111928127FF0D8F0035BD62 /* OnboardingCollectionViewCell.swift */; };
 		1111928528003B5C0035BD62 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111928428003B5C0035BD62 /* AddTaskViewController.swift */; };
+		111192B02802D9870035BD62 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 111192AE2802D9870035BD62 /* Model.xcdatamodeld */; };
+		111192BC2802DA800035BD62 /* TaskItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111192BA2802DA800035BD62 /* TaskItem+CoreDataClass.swift */; };
+		111192BD2802DA800035BD62 /* TaskItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111192BB2802DA800035BD62 /* TaskItem+CoreDataProperties.swift */; };
 		11D9DCB227FC2FDE00A466F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9DCB127FC2FDE00A466F2 /* AppDelegate.swift */; };
 		11D9DCB427FC2FDE00A466F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9DCB327FC2FDE00A466F2 /* SceneDelegate.swift */; };
 		11D9DCB627FC2FDE00A466F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9DCB527FC2FDE00A466F2 /* ViewController.swift */; };
@@ -30,6 +33,9 @@
 		1111927F27FF0D530035BD62 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		1111928127FF0D8F0035BD62 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		1111928428003B5C0035BD62 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		111192AF2802D9870035BD62 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		111192BA2802DA800035BD62 /* TaskItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		111192BB2802DA800035BD62 /* TaskItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		11D9DCAE27FC2FDE00A466F2 /* mc1-team-10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mc1-team-10.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11D9DCB127FC2FDE00A466F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11D9DCB327FC2FDE00A466F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +109,15 @@
 			path = "Add Task";
 			sourceTree = "<group>";
 		};
+		111192B52802DA0F0035BD62 /* TaskItemCoreData */ = {
+			isa = PBXGroup;
+			children = (
+				111192BA2802DA800035BD62 /* TaskItem+CoreDataClass.swift */,
+				111192BB2802DA800035BD62 /* TaskItem+CoreDataProperties.swift */,
+			);
+			path = TaskItemCoreData;
+			sourceTree = "<group>";
+		};
 		11D9DCA527FC2FDE00A466F2 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +137,7 @@
 		11D9DCB027FC2FDE00A466F2 /* mc1-team-10 */ = {
 			isa = PBXGroup;
 			children = (
+				111192B52802DA0F0035BD62 /* TaskItemCoreData */,
 				1111927927FEC9330035BD62 /* Models */,
 				1111927627FEC4EE0035BD62 /* TableCells */,
 				1111927227FEC37E0035BD62 /* Views */,
@@ -129,6 +145,7 @@
 				11D9DCB327FC2FDE00A466F2 /* SceneDelegate.swift */,
 				11D9DCB527FC2FDE00A466F2 /* ViewController.swift */,
 				11D9DCB727FC2FDE00A466F2 /* Main.storyboard */,
+				111192AE2802D9870035BD62 /* Model.xcdatamodeld */,
 				11D9DCBA27FC2FDF00A466F2 /* Assets.xcassets */,
 				11D9DCBC27FC2FDF00A466F2 /* LaunchScreen.storyboard */,
 				11D9DCBF27FC2FDF00A466F2 /* Info.plist */,
@@ -212,10 +229,13 @@
 				1111927827FEC5040035BD62 /* TaskTableViewCell.swift in Sources */,
 				11D9DCB227FC2FDE00A466F2 /* AppDelegate.swift in Sources */,
 				1111928027FF0D530035BD62 /* OnboardingSlide.swift in Sources */,
+				111192BC2802DA800035BD62 /* TaskItem+CoreDataClass.swift in Sources */,
 				1111927E27FF09BA0035BD62 /* OnboardingViewController.swift in Sources */,
 				1111927B27FEC93E0035BD62 /* Task.swift in Sources */,
 				11D9DCB427FC2FDE00A466F2 /* SceneDelegate.swift in Sources */,
+				111192BD2802DA800035BD62 /* TaskItem+CoreDataProperties.swift in Sources */,
 				1111928227FF0D8F0035BD62 /* OnboardingCollectionViewCell.swift in Sources */,
+				111192B02802D9870035BD62 /* Model.xcdatamodeld in Sources */,
 				1111928528003B5C0035BD62 /* AddTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +454,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		111192AE2802D9870035BD62 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				111192AF2802D9870035BD62 /* Model.xcdatamodel */,
+			);
+			currentVersion = 111192AF2802D9870035BD62 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 11D9DCA627FC2FDE00A466F2 /* Project object */;
 }

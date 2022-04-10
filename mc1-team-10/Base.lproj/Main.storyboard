@@ -161,6 +161,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Add" buttonSize="large"/>
+                                <connections>
+                                    <action selector="didTapAdd:" destination="7zr-2P-MdT" eventType="touchUpInside" id="UJ9-rl-f2y"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="h4g-r8-fdj">
                                 <rect key="frame" x="20" y="114" width="374" height="214"/>
@@ -257,7 +260,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="t5v-KX-jgY" id="gyD-fQ-LtF"/>
+                        <outlet property="difficultySelect" destination="GUT-77-lx8" id="Xai-NR-KMa"/>
+                        <outlet property="dueDateSelect" destination="7v7-bX-jYB" id="iQH-oC-SrG"/>
                         <outlet property="navBar" destination="laj-TV-07M" id="TYB-qe-dvD"/>
+                        <outlet property="taskNameField" destination="8sv-wg-Suc" id="DfX-Qh-2jm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jre-UD-5su" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

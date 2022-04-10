@@ -7,12 +7,24 @@
 
 import Foundation
 
-enum TaskStatus {
+enum TaskStatus: String {
     case unlisted
     case finished
     case one
     case three
     case five
+    
+    var description: String {
+          return "\(self)"
+      }
+}
+
+enum Difficulty: String {
+    case easy, medium, hard
+    
+    var description: String {
+          return "\(self)"
+      }
 }
 
 struct Task {
