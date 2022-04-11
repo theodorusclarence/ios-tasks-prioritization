@@ -56,10 +56,10 @@ class MyTaskViewController: UIViewController {
             filteredTasks = tasks
             // Unlisted
         case 1:
-            filteredTasks = tasks.filter {$0.taskStatus == .unlisted }
+            filteredTasks = tasks.filter {$0.taskStatus == .unlisted && $0.isFinished == false }
             // Finished
         case 2:
-            filteredTasks = tasks.filter {$0.taskStatus == .finished }
+            filteredTasks = tasks.filter {$0.isFinished == true }
             
         default:
             filteredTasks = tasks
@@ -89,8 +89,15 @@ class MyTaskViewController: UIViewController {
 
 extension MyTaskViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You tapped me! \(filteredTasks[indexPath.row].taskName)")
-        print("status \(filteredTasks[indexPath.row].status)")
+        print("You tapped me! \(String(describing: filteredTasks[indexPath.row].taskName))")
+        print("status \(String(describing: filteredTasks[indexPath.row].status))")
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        guard let taskDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "TaskDetailViewController") as? TaskDetailViewController else { return };
+        let task = filteredTasks[indexPath.row]
+        taskDetailVC.task = task
+        self.navigationController?.pushViewController(taskDetailVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -108,10 +115,7 @@ extension MyTaskViewController: UITableViewDataSource {
         
         let task = filteredTasks[indexPath.row]
         cell.taskName.text = task.taskName
-        
-        let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "d MMMM YYYY"
-        cell.dueDate.text = (task.dueDate != nil) ? dateFormatterGet.string(from: task.dueDate!) : ""
+        cell.dueDate.text = (task.dueDate != nil) ? DateHelper().getStringDate(task.dueDate!) : ""
         
         return cell
     }

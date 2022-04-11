@@ -20,6 +20,7 @@ extension TaskItem {
 
     @NSManaged public var taskName: String?
     @NSManaged public var dueDate: Date?
+    @NSManaged public var isFinished: Bool
     @NSManaged public var status: String?
     var taskStatus: TaskStatus {
             set {

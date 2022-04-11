@@ -17,6 +17,9 @@
 		111192B02802D9870035BD62 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 111192AE2802D9870035BD62 /* Model.xcdatamodeld */; };
 		111192BC2802DA800035BD62 /* TaskItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111192BA2802DA800035BD62 /* TaskItem+CoreDataClass.swift */; };
 		111192BD2802DA800035BD62 /* TaskItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111192BB2802DA800035BD62 /* TaskItem+CoreDataProperties.swift */; };
+		11498EF5280411EE002717F6 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11498EF4280411EE002717F6 /* TaskDetailViewController.swift */; };
+		11498EF828041FA8002717F6 /* NSMutableAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11498EF728041FA8002717F6 /* NSMutableAttributedString+Extension.swift */; };
+		11498EFB28042439002717F6 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11498EFA28042439002717F6 /* DateHelper.swift */; };
 		11D9DCB227FC2FDE00A466F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9DCB127FC2FDE00A466F2 /* AppDelegate.swift */; };
 		11D9DCB427FC2FDE00A466F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9DCB327FC2FDE00A466F2 /* SceneDelegate.swift */; };
 		11D9DCB627FC2FDE00A466F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9DCB527FC2FDE00A466F2 /* ViewController.swift */; };
@@ -36,6 +39,9 @@
 		111192AF2802D9870035BD62 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		111192BA2802DA800035BD62 /* TaskItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		111192BB2802DA800035BD62 /* TaskItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		11498EF4280411EE002717F6 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
+		11498EF728041FA8002717F6 /* NSMutableAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		11498EFA28042439002717F6 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		11D9DCAE27FC2FDE00A466F2 /* mc1-team-10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mc1-team-10.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11D9DCB127FC2FDE00A466F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11D9DCB327FC2FDE00A466F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +66,7 @@
 		1111927227FEC37E0035BD62 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				11498EF3280411D2002717F6 /* TaskDetail */,
 				1111928328003B3C0035BD62 /* Add Task */,
 				1111927C27FF09A60035BD62 /* Onboarding */,
 				1111927327FEC38B0035BD62 /* MyTask */,
@@ -118,6 +125,30 @@
 			path = TaskItemCoreData;
 			sourceTree = "<group>";
 		};
+		11498EF3280411D2002717F6 /* TaskDetail */ = {
+			isa = PBXGroup;
+			children = (
+				11498EF4280411EE002717F6 /* TaskDetailViewController.swift */,
+			);
+			path = TaskDetail;
+			sourceTree = "<group>";
+		};
+		11498EF628041F6E002717F6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				11498EF728041FA8002717F6 /* NSMutableAttributedString+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		11498EF92804242D002717F6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				11498EFA28042439002717F6 /* DateHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		11D9DCA527FC2FDE00A466F2 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +168,8 @@
 		11D9DCB027FC2FDE00A466F2 /* mc1-team-10 */ = {
 			isa = PBXGroup;
 			children = (
+				11498EF92804242D002717F6 /* Helpers */,
+				11498EF628041F6E002717F6 /* Extensions */,
 				111192B52802DA0F0035BD62 /* TaskItemCoreData */,
 				1111927927FEC9330035BD62 /* Models */,
 				1111927627FEC4EE0035BD62 /* TableCells */,
@@ -224,13 +257,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11498EF5280411EE002717F6 /* TaskDetailViewController.swift in Sources */,
 				1111927527FEC3A40035BD62 /* MyTaskViewController.swift in Sources */,
+				11498EF828041FA8002717F6 /* NSMutableAttributedString+Extension.swift in Sources */,
 				11D9DCB627FC2FDE00A466F2 /* ViewController.swift in Sources */,
 				1111927827FEC5040035BD62 /* TaskTableViewCell.swift in Sources */,
 				11D9DCB227FC2FDE00A466F2 /* AppDelegate.swift in Sources */,
 				1111928027FF0D530035BD62 /* OnboardingSlide.swift in Sources */,
 				111192BC2802DA800035BD62 /* TaskItem+CoreDataClass.swift in Sources */,
 				1111927E27FF09BA0035BD62 /* OnboardingViewController.swift in Sources */,
+				11498EFB28042439002717F6 /* DateHelper.swift in Sources */,
 				1111927B27FEC93E0035BD62 /* Task.swift in Sources */,
 				11D9DCB427FC2FDE00A466F2 /* SceneDelegate.swift in Sources */,
 				111192BD2802DA800035BD62 /* TaskItem+CoreDataProperties.swift in Sources */,

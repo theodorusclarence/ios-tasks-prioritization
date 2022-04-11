@@ -20,10 +20,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wBh-dq-P2Z">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="iXu-bl-qwH">
-                                        <rect key="frame" x="20" y="32" width="374" height="41"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="41"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kw6-TB-4fF">
                                                 <rect key="frame" x="0.0" y="0.0" width="128" height="41"/>
@@ -42,7 +42,7 @@
                                         </subviews>
                                     </stackView>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="H1O-k9-KFa">
-                                        <rect key="frame" x="20" y="85" width="374" height="32"/>
+                                        <rect key="frame" x="20" y="53" width="374" height="32"/>
                                         <segments>
                                             <segment title="All Tasks"/>
                                             <segment title="Unlisted"/>
@@ -53,7 +53,7 @@
                                         </connections>
                                     </segmentedControl>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nmv-yx-fAH">
-                                        <rect key="frame" x="20" y="136" width="374" height="585"/>
+                                        <rect key="frame" x="20" y="104" width="374" height="573"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Task" rowHeight="51" id="gnz-R2-QnG" customClass="TaskTableViewCell" customModule="mc1_team_10" customModuleProvider="target">
@@ -110,7 +110,7 @@
                                     <constraint firstItem="H1O-k9-KFa" firstAttribute="leading" secondItem="wBh-dq-P2Z" secondAttribute="leading" constant="20" id="BaA-FL-Dvb"/>
                                     <constraint firstAttribute="trailing" secondItem="H1O-k9-KFa" secondAttribute="trailing" constant="20" id="DUV-iP-F3h"/>
                                     <constraint firstItem="H1O-k9-KFa" firstAttribute="top" secondItem="iXu-bl-qwH" secondAttribute="bottom" constant="12" id="E9l-Zd-toc"/>
-                                    <constraint firstItem="iXu-bl-qwH" firstAttribute="top" secondItem="wBh-dq-P2Z" secondAttribute="top" constant="32" id="Ftw-nK-1ug"/>
+                                    <constraint firstItem="iXu-bl-qwH" firstAttribute="top" secondItem="wBh-dq-P2Z" secondAttribute="top" id="Ftw-nK-1ug"/>
                                     <constraint firstAttribute="trailing" secondItem="iXu-bl-qwH" secondAttribute="trailing" constant="20" id="KkT-cJ-NpP"/>
                                     <constraint firstAttribute="bottom" secondItem="nmv-yx-fAH" secondAttribute="bottom" constant="131" id="Kon-jp-dz3"/>
                                     <constraint firstItem="iXu-bl-qwH" firstAttribute="leading" secondItem="wBh-dq-P2Z" secondAttribute="leading" constant="20" id="R55-Tg-rbm"/>
@@ -139,6 +139,130 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1977" y="70"/>
+        </scene>
+        <!--Task Detail View Controller-->
+        <scene sceneID="QCw-G4-CUq">
+            <objects>
+                <viewController storyboardIdentifier="TaskDetailViewController" id="MHu-Tw-PbV" customClass="TaskDetailViewController" customModule="mc1_team_10" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qPp-xu-J6O">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7h9-IG-syU">
+                                <rect key="frame" x="20" y="56" width="374" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="159" translatesAutoresizingMaskIntoConstraints="NO" id="sms-Le-vLk">
+                                <rect key="frame" x="20" y="101" width="374" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cu1-Yg-6Zj">
+                                        <rect key="frame" x="0.0" y="0.0" width="67" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="paQ-e6-5lv">
+                                        <rect key="frame" x="226" y="0.0" width="148" height="20.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="calendar.badge.clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8l3-rJ-2Z6">
+                                                <rect key="frame" x="0.0" y="1.5" width="22.5" height="19.5"/>
+                                                <color key="tintColor" systemColor="secondaryLabelColor"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2 January 2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNF-1J-bT3">
+                                                <rect key="frame" x="29" y="0.0" width="119" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NiR-AH-qtI">
+                                <rect key="frame" x="20" y="239.5" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Flowtime"/>
+                                    <segment title="Pomodoro"/>
+                                </segments>
+                                <connections>
+                                    <action selector="timerMethodChanges:" destination="MHu-Tw-PbV" eventType="valueChanged" id="PWS-rL-f53"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work with" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0I-Tt-cGi">
+                                <rect key="frame" x="20" y="209.5" width="374" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flowtime is great for task that needs a long thinking time, and uses your creativity." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvl-3m-sKZ">
+                                <rect key="frame" x="20" y="290.5" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wnh-XV-272">
+                                <rect key="frame" x="20" y="822" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="qFI-gl-c3y"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Finish Task" buttonSize="large"/>
+                                <connections>
+                                    <action selector="didTapAdd:" destination="7zr-2P-MdT" eventType="touchUpInside" id="DZg-Z9-1SZ"/>
+                                    <action selector="didTapFinishTask:" destination="MHu-Tw-PbV" eventType="touchUpInside" id="ncZ-fJ-siV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucZ-fm-EUI">
+                                <rect key="frame" x="20" y="770" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ZZ8-wC-OOl"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Start Working with Timer" buttonSize="large"/>
+                                <connections>
+                                    <action selector="didTapAdd:" destination="7zr-2P-MdT" eventType="touchUpInside" id="B4d-aG-agb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Kid-EP-04n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7h9-IG-syU" firstAttribute="top" secondItem="Kid-EP-04n" secondAttribute="top" constant="12" id="1VV-pp-PS4"/>
+                            <constraint firstItem="Kid-EP-04n" firstAttribute="trailing" secondItem="ucZ-fm-EUI" secondAttribute="trailing" constant="20" id="6wh-Vz-srr"/>
+                            <constraint firstItem="Kid-EP-04n" firstAttribute="trailing" secondItem="H0I-Tt-cGi" secondAttribute="trailing" constant="20" id="A54-o5-ugf"/>
+                            <constraint firstItem="H0I-Tt-cGi" firstAttribute="leading" secondItem="Kid-EP-04n" secondAttribute="leading" constant="20" id="DTS-hA-Ekf"/>
+                            <constraint firstItem="7h9-IG-syU" firstAttribute="leading" secondItem="Kid-EP-04n" secondAttribute="leading" constant="20" id="FlH-CS-jNQ"/>
+                            <constraint firstItem="Wnh-XV-272" firstAttribute="top" secondItem="ucZ-fm-EUI" secondAttribute="bottom" constant="12" id="Hge-Qo-qlg"/>
+                            <constraint firstItem="NiR-AH-qtI" firstAttribute="top" secondItem="H0I-Tt-cGi" secondAttribute="bottom" constant="12" id="Jdb-qh-Ojm"/>
+                            <constraint firstItem="H0I-Tt-cGi" firstAttribute="top" secondItem="sms-Le-vLk" secondAttribute="bottom" constant="88" id="LMd-5V-O6C"/>
+                            <constraint firstItem="sms-Le-vLk" firstAttribute="top" secondItem="7h9-IG-syU" secondAttribute="bottom" constant="16" id="Pfc-V1-5Z4"/>
+                            <constraint firstItem="ucZ-fm-EUI" firstAttribute="leading" secondItem="Kid-EP-04n" secondAttribute="leading" constant="20" id="Q6n-SH-wks"/>
+                            <constraint firstItem="NiR-AH-qtI" firstAttribute="leading" secondItem="Kid-EP-04n" secondAttribute="leading" constant="20" id="TvS-BL-6zc"/>
+                            <constraint firstItem="Kid-EP-04n" firstAttribute="trailing" secondItem="sms-Le-vLk" secondAttribute="trailing" constant="20" id="Y4C-fw-XP9"/>
+                            <constraint firstItem="Wnh-XV-272" firstAttribute="leading" secondItem="Kid-EP-04n" secondAttribute="leading" constant="20" id="cnY-YP-GYH"/>
+                            <constraint firstItem="Nvl-3m-sKZ" firstAttribute="leading" secondItem="Kid-EP-04n" secondAttribute="leading" constant="20" id="dJd-Ak-EDr"/>
+                            <constraint firstItem="Kid-EP-04n" firstAttribute="trailing" secondItem="Wnh-XV-272" secondAttribute="trailing" constant="20" id="hCl-cp-gwW"/>
+                            <constraint firstItem="Wnh-XV-272" firstAttribute="bottom" secondItem="Kid-EP-04n" secondAttribute="bottom" id="ifR-3l-apo"/>
+                            <constraint firstAttribute="trailing" secondItem="Nvl-3m-sKZ" secondAttribute="trailing" constant="20" id="mHc-tn-CZr"/>
+                            <constraint firstItem="Nvl-3m-sKZ" firstAttribute="top" secondItem="NiR-AH-qtI" secondAttribute="bottom" constant="20" id="vG8-tz-Yeh"/>
+                            <constraint firstItem="sms-Le-vLk" firstAttribute="leading" secondItem="Kid-EP-04n" secondAttribute="leading" constant="20" id="va3-Qc-a8R"/>
+                            <constraint firstItem="Kid-EP-04n" firstAttribute="trailing" secondItem="7h9-IG-syU" secondAttribute="trailing" constant="20" id="x23-T6-gPL"/>
+                            <constraint firstItem="Kid-EP-04n" firstAttribute="trailing" secondItem="NiR-AH-qtI" secondAttribute="trailing" constant="20" id="ytw-aq-IFW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dueDateLabel" destination="oNF-1J-bT3" id="rL0-iC-ckB"/>
+                        <outlet property="methodHelpLabel" destination="Nvl-3m-sKZ" id="1cy-Ii-UU1"/>
+                        <outlet property="statusLabel" destination="cu1-Yg-6Zj" id="wUk-ME-cWu"/>
+                        <outlet property="taskNameLabel" destination="7h9-IG-syU" id="NTv-GI-soN"/>
+                        <outlet property="timerMethodControl" destination="NiR-AH-qtI" id="8HY-ms-aBE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ae0-Ef-WZv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2850.7246376811595" y="69.642857142857139"/>
         </scene>
         <!--Add Task View Controller-->
         <scene sceneID="fJo-g8-oyI">
@@ -269,15 +393,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jre-UD-5su" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2869.5652173913045" y="69.642857142857139"/>
+            <point key="canvasLocation" x="3633" y="70"/>
         </scene>
         <!--My Task-->
         <scene sceneID="xKZ-eE-ti6">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="aIm-OL-p31" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aIm-OL-p31" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My Task" id="O5g-0L-Mfd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UlC-xG-J9y">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
@@ -315,7 +440,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pv-Ol-yYi">
                                                 <rect key="frame" x="329" y="0.0" width="45" height="31"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system">
+                                                <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" title="">
                                                     <color key="baseForegroundColor" systemColor="secondaryLabelColor"/>
                                                 </buttonConfiguration>
                                             </button>
@@ -563,6 +688,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="calendar.badge.clock" catalog="system" width="128" height="108"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">

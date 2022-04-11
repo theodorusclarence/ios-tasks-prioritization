@@ -3,10 +3,11 @@
     <entity name="TaskItem" representedClassName=".TaskItem" syncable="YES">
         <attribute name="difficulty" optional="YES" attributeType="String"/>
         <attribute name="dueDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isFinished" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="status" optional="YES" attributeType="String"/>
         <attribute name="taskName" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="TaskItem" positionX="-54" positionY="-9" width="128" height="89"/>
+        <element name="TaskItem" positionX="-54" positionY="-9" width="128" height="118"/>
     </elements>
 </model>
