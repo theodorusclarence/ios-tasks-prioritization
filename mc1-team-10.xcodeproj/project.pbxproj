@@ -67,7 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				11498EF3280411D2002717F6 /* TaskDetail */,
-				1111928328003B3C0035BD62 /* Add Task */,
+				1111928328003B3C0035BD62 /* AddTask */,
 				1111927C27FF09A60035BD62 /* Onboarding */,
 				1111927327FEC38B0035BD62 /* MyTask */,
 			);
@@ -108,12 +108,12 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
-		1111928328003B3C0035BD62 /* Add Task */ = {
+		1111928328003B3C0035BD62 /* AddTask */ = {
 			isa = PBXGroup;
 			children = (
 				1111928428003B5C0035BD62 /* AddTaskViewController.swift */,
 			);
-			path = "Add Task";
+			path = AddTask;
 			sourceTree = "<group>";
 		};
 		111192B52802DA0F0035BD62 /* TaskItemCoreData */ = {

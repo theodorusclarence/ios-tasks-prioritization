@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol AddTaskViewControllerDelegate {
+    func onSave()
+}
+
 class AddTaskViewController: UIViewController {
 
     @IBOutlet weak var navBar: UINavigationBar!
@@ -17,6 +21,8 @@ class AddTaskViewController: UIViewController {
     @IBOutlet weak var addButton: UIButton!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    var delegate: AddTaskViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,13 +69,6 @@ class AddTaskViewController: UIViewController {
         navBar.topItem?.rightBarButtonItem?.isEnabled = true
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        let tbc = presentingViewController as! UITabBarController
-        let nc = tbc.viewControllers![0] as! UINavigationController
-        let vc = nc.viewControllers[0] as! MyTaskViewController
-        vc.loadItems()
-    }
-    
     @IBAction func didTapAdd(_ sender: UIButton) {
         let newTask = TaskItem(context: context)
         newTask.taskName = taskNameField.text
@@ -84,6 +83,9 @@ class AddTaskViewController: UIViewController {
         } catch {
             
         }
+        
+        // trigger delegate on MyTaskViewController
+        delegate?.onSave()
         
         dismiss(animated: true)
     }

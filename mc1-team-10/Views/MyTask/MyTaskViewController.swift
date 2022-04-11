@@ -121,3 +121,8 @@ extension MyTaskViewController: UITableViewDataSource {
     }
 }
 
+extension MyTaskViewController: AddTaskViewControllerDelegate {
+    func onSave() {
+        loadItems()
+    }
+}
