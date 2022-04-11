@@ -68,14 +68,14 @@ class TaskDetailViewController: UIViewController {
         dueDateLabel.text = (task?.dueDate != nil) ? DateHelper().getStringDate(task!.dueDate!) : ""
     }
     
-    @objc func didTapEdit() {
+    func didTapEdit() {
         let controller = (storyboard?.instantiateViewController(withIdentifier:"EditTaskVC")) as! EditTaskViewController
         controller.task = task
         controller.delegate = self
         self.present(controller, animated: true, completion: nil)
     }
     
-    @objc func didTapDelete() {
+    func didTapDelete() {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         if let taskToDelete = task {
@@ -89,7 +89,6 @@ class TaskDetailViewController: UIViewController {
         } catch {
             
         }
-    
     }
     
     @IBAction func timerMethodChanges(_ sender: UISegmentedControl) {

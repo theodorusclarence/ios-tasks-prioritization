@@ -14,7 +14,7 @@
         <!--My Task View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MyTaskViewController" customModule="mc1_team_10" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyTaskVC" id="BYZ-38-t0r" customClass="MyTaskViewController" customModule="mc1_team_10" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -660,7 +660,7 @@
         <!--Onboarding View Controller-->
         <scene sceneID="7Rt-lv-QRG">
             <objects>
-                <viewController id="JdX-Jn-XaL" customClass="OnboardingViewController" customModule="mc1_team_10" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardingVC" id="JdX-Jn-XaL" customClass="OnboardingViewController" customModule="mc1_team_10" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Mb-oq-Pgy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
