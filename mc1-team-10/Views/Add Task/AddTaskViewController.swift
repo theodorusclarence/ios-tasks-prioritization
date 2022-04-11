@@ -24,11 +24,21 @@ class AddTaskViewController: UIViewController {
         navBar.topItem?.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(cancelModal))
         navBar.topItem?.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .done, target: self, action: #selector(didTapAdd))
         
+        taskNameField.delegate = self
+        
         // Event listener for enabling buttons
         addButton.isEnabled = false
         navBar.topItem?.rightBarButtonItem?.isEnabled = false
         taskNameField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         
+        taskNameField.becomeFirstResponder()
+        difficultySelect.addTarget(self, action: #selector(closeKeyboard), for: .valueChanged)
+        dueDateSelect.addTarget(self, action: #selector(closeKeyboard), for: .valueChanged)
+    }
+    
+    @objc func closeKeyboard() {
+        print("touch")
+        self.view.endEditing(true)
     }
     
     @objc func cancelModal() {
@@ -76,5 +86,13 @@ class AddTaskViewController: UIViewController {
         }
         
         dismiss(animated: true)
+    }
+}
+
+
+extension AddTaskViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            self.view.endEditing(true)
+            return false
     }
 }

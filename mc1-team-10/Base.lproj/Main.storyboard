@@ -199,7 +199,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flowtime is great for task that needs a long thinking time, and uses your creativity." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvl-3m-sKZ">
                                 <rect key="frame" x="20" y="290.5" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wnh-XV-272">
@@ -278,17 +278,6 @@
                                     <navigationItem title="Add New Task" id="Fe1-5t-eLU"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5v-KX-jgY">
-                                <rect key="frame" x="20" y="806" width="374" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Nl5-lX-JnP"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Add" buttonSize="large"/>
-                                <connections>
-                                    <action selector="didTapAdd:" destination="7zr-2P-MdT" eventType="touchUpInside" id="UJ9-rl-f2y"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="h4g-r8-fdj">
                                 <rect key="frame" x="20" y="114" width="374" height="214"/>
                                 <subviews>
@@ -298,7 +287,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jW7-Iq-p8D">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8sv-wg-Suc">
@@ -322,7 +311,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aj8-jY-8xP">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GUT-77-lx8">
@@ -349,7 +338,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deadline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAh-4N-fV8">
                                                 <rect key="frame" x="0.0" y="0.0" width="67" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="7v7-bX-jYB">
@@ -368,6 +357,17 @@
                                     <constraint firstAttribute="trailing" secondItem="lC6-5o-aYg" secondAttribute="trailing" id="aoA-8g-MXg"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5v-KX-jgY">
+                                <rect key="frame" x="20" y="806" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Nl5-lX-JnP"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add" buttonSize="large"/>
+                                <connections>
+                                    <action selector="didTapAdd:" destination="7zr-2P-MdT" eventType="touchUpInside" id="UJ9-rl-f2y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aMY-eP-rlb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -385,7 +385,7 @@
                     </view>
                     <connections>
                         <outlet property="addButton" destination="t5v-KX-jgY" id="gyD-fQ-LtF"/>
-                        <outlet property="difficultySelect" destination="GUT-77-lx8" id="Xai-NR-KMa"/>
+                        <outlet property="difficultySelect" destination="GUT-77-lx8" id="TTv-B4-gfG"/>
                         <outlet property="dueDateSelect" destination="7v7-bX-jYB" id="iQH-oC-SrG"/>
                         <outlet property="navBar" destination="laj-TV-07M" id="TYB-qe-dvD"/>
                         <outlet property="taskNameField" destination="8sv-wg-Suc" id="DfX-Qh-2jm"/>
