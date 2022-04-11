@@ -14,17 +14,6 @@ class MyTaskViewController: UIViewController {
     @IBOutlet weak var sectionControl: UISegmentedControl!
     @IBOutlet weak var addButton: UIButton!
     
-//    var tasks: [Task] = [
-//        Task(taskName: "Makan", dueDate: "Due 2 January 2022", status: .finished),
-//        Task(taskName: "Minum", dueDate: "Due 3 January 2022", status: .one),
-//        Task(taskName: "Ngerjain", dueDate: "Due 4 January 2022", status: .three),
-//        Task(taskName: "Tidur", dueDate: "Due 5 January 2022", status: .five),
-//        Task(taskName: "Apa", dueDate: "Due 6 January 2022", status: .finished),
-//        Task(taskName: "Tidur 1", dueDate: "Due 5 January 2022", status: .unlisted),
-//        Task(taskName: "Tidur 2", dueDate: "Due 5 January 2022", status: .unlisted),
-//        Task(taskName: "Tidur 3", dueDate: "Due 5 January 2022", status: .unlisted),
-//    ]
-    
     var filteredTasks: [TaskItem] = []
     let navbarTitle = UILabel()
     
@@ -46,8 +35,9 @@ class MyTaskViewController: UIViewController {
     }
     
     @IBAction func addButtonClicked(_ sender: Any) {
-        let controller = storyboard?.instantiateViewController(withIdentifier:"AddTaskVC")
-        self.present(controller!, animated: true, completion: {  print("Hi") })
+        let controller = (storyboard?.instantiateViewController(withIdentifier:"AddTaskVC")) as! AddTaskViewController
+        controller.delegate = self
+        self.present(controller, animated: true, completion: nil)
     }
     
     func filterTasks(_ statusIndex: Int) {
@@ -97,6 +87,7 @@ extension MyTaskViewController: UITableViewDelegate {
         guard let taskDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "TaskDetailViewController") as? TaskDetailViewController else { return };
         let task = filteredTasks[indexPath.row]
         taskDetailVC.task = task
+        taskDetailVC.delegate = self
         self.navigationController?.pushViewController(taskDetailVC, animated: true)
     }
     
@@ -121,8 +112,12 @@ extension MyTaskViewController: UITableViewDataSource {
     }
 }
 
-extension MyTaskViewController: AddTaskViewControllerDelegate {
+extension MyTaskViewController: AddTaskViewControllerDelegate, TaskDetailViewControllerDelegate {
     func onSave() {
+        loadItems()
+    }
+    
+    func passOnEdit() {
         loadItems()
     }
 }

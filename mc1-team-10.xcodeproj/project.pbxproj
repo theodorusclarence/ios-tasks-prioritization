@@ -20,6 +20,7 @@
 		11498EF5280411EE002717F6 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11498EF4280411EE002717F6 /* TaskDetailViewController.swift */; };
 		11498EF828041FA8002717F6 /* NSMutableAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11498EF728041FA8002717F6 /* NSMutableAttributedString+Extension.swift */; };
 		11498EFB28042439002717F6 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11498EFA28042439002717F6 /* DateHelper.swift */; };
+		11498EFD280462ED002717F6 /* EditTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11498EFC280462ED002717F6 /* EditTaskViewController.swift */; };
 		11D9DCB227FC2FDE00A466F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9DCB127FC2FDE00A466F2 /* AppDelegate.swift */; };
 		11D9DCB427FC2FDE00A466F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9DCB327FC2FDE00A466F2 /* SceneDelegate.swift */; };
 		11D9DCB627FC2FDE00A466F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9DCB527FC2FDE00A466F2 /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 		11498EF4280411EE002717F6 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
 		11498EF728041FA8002717F6 /* NSMutableAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extension.swift"; sourceTree = "<group>"; };
 		11498EFA28042439002717F6 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		11498EFC280462ED002717F6 /* EditTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskViewController.swift; sourceTree = "<group>"; };
 		11D9DCAE27FC2FDE00A466F2 /* mc1-team-10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mc1-team-10.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11D9DCB127FC2FDE00A466F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11D9DCB327FC2FDE00A466F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,7 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				11498EF3280411D2002717F6 /* TaskDetail */,
-				1111928328003B3C0035BD62 /* AddTask */,
+				1111928328003B3C0035BD62 /* Task */,
 				1111927C27FF09A60035BD62 /* Onboarding */,
 				1111927327FEC38B0035BD62 /* MyTask */,
 			);
@@ -108,12 +110,13 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
-		1111928328003B3C0035BD62 /* AddTask */ = {
+		1111928328003B3C0035BD62 /* Task */ = {
 			isa = PBXGroup;
 			children = (
 				1111928428003B5C0035BD62 /* AddTaskViewController.swift */,
+				11498EFC280462ED002717F6 /* EditTaskViewController.swift */,
 			);
-			path = AddTask;
+			path = Task;
 			sourceTree = "<group>";
 		};
 		111192B52802DA0F0035BD62 /* TaskItemCoreData */ = {
@@ -263,6 +266,7 @@
 				11D9DCB627FC2FDE00A466F2 /* ViewController.swift in Sources */,
 				1111927827FEC5040035BD62 /* TaskTableViewCell.swift in Sources */,
 				11D9DCB227FC2FDE00A466F2 /* AppDelegate.swift in Sources */,
+				11498EFD280462ED002717F6 /* EditTaskViewController.swift in Sources */,
 				1111928027FF0D530035BD62 /* OnboardingSlide.swift in Sources */,
 				111192BC2802DA800035BD62 /* TaskItem+CoreDataClass.swift in Sources */,
 				1111927E27FF09BA0035BD62 /* OnboardingViewController.swift in Sources */,
