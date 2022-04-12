@@ -77,7 +77,7 @@ class TaskDetailViewController: UIViewController {
     
     func updateContents() {
         taskNameLabel.text = task?.taskName ?? "Task Name"
-        statusLabel.text = task?.status ?? "Status"
+        statusLabel.text = task?.status?.capitalized ?? "Status"
         dueDateLabel.text = (task?.dueDate != nil) ? DateHelper().getStringDate(task!.dueDate!) : ""
     }
     

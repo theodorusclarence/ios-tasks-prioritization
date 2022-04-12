@@ -12,6 +12,7 @@ class MyTaskViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var sectionControl: UISegmentedControl!
+    @IBOutlet weak var emptyPlaceholder: UIStackView!
     @IBOutlet weak var addButton: UIButton!
     
     var filteredTasks: [TaskItem] = []
@@ -32,6 +33,9 @@ class MyTaskViewController: UIViewController {
         
         navbarTitle.font = UIFont.systemFont(ofSize: 34, weight: .bold)
         navbarTitle.text = "My Tasks"
+        
+        
+        
     }
     
     @IBAction func addButtonClicked(_ sender: Any) {
@@ -54,6 +58,8 @@ class MyTaskViewController: UIViewController {
         default:
             filteredTasks = tasks
         }
+        self.emptyPlaceholder.isHidden = self.filteredTasks.count != 0
+        tableView.isHidden = filteredTasks.count == 0
     }
     
     @IBAction func sectionChanged(_ sender: UISegmentedControl) {
@@ -92,7 +98,7 @@ extension MyTaskViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 68
+        return 70
     }
 }
 
