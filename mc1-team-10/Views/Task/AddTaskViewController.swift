@@ -40,6 +40,7 @@ class AddTaskViewController: UIViewController {
         taskNameField.becomeFirstResponder()
         difficultySelect.addTarget(self, action: #selector(closeKeyboard), for: .valueChanged)
         dueDateSelect.addTarget(self, action: #selector(closeKeyboard), for: .valueChanged)
+        dueDateSelect.minimumDate = Date()
     }
     
     @objc func closeKeyboard() {
