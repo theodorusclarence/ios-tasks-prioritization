@@ -14,11 +14,12 @@ class TaskTableViewCell: UITableViewCell {
     @IBOutlet weak var dueDate: UILabel!
     @IBOutlet weak var difficulty: UILabel!
     @IBOutlet weak var difficultyWrapper: UIView!
+    @IBOutlet weak var checkMark: UIImageView!
     
     
     func setup(_ task: TaskItem) {
         taskName.text = task.taskName
-        dueDate.text = (task.dueDate != nil) ? DateHelper().getStringDate(task.dueDate!) : ""
+        dueDate.text = "Due \((task.dueDate != nil) ? DateHelper().getStringDate(task.dueDate!) : "")"
         difficulty.text = task.difficulty
         
         let difficultyEnum = Difficulty(rawValue: difficulty.text ?? "easy")
@@ -35,6 +36,8 @@ class TaskTableViewCell: UITableViewCell {
             difficultyWrapper.backgroundColor = UIColor(red: 0.89, green: 0.99, blue: 1.00, alpha: 1.00)
             difficulty.textColor = UIColor(red: 0.05, green: 0.20, blue: 0.26, alpha: 1.00)
         }
+        
+        checkMark.isHidden = !task.isFinished
     }
     
     

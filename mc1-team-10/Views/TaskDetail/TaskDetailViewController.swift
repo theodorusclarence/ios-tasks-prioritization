@@ -20,8 +20,12 @@ class TaskDetailViewController: UIViewController {
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var dueDateLabel: UILabel!
     
+    @IBOutlet weak var startWorkingButton: UIButton!
+    @IBOutlet weak var finishButton: UIButton!
+    
     var task: TaskItem?
     var delegate: TaskDetailViewControllerDelegate?
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     let flowtimeHelp =  NSMutableAttributedString()
         .normal("Flowtime is great for task that needs ")
@@ -59,6 +63,15 @@ class TaskDetailViewController: UIViewController {
         
         methodHelpLabel.attributedText = flowtimeHelp
         
+        // Button Logic
+        if let finished = task?.isFinished {
+            if finished {
+                startWorkingButton.isHidden = true
+                finishButton.titleLabel?.text = "Mark Unfinished"
+            }
+            
+        }
+        
         updateContents()
     }
     
@@ -76,8 +89,6 @@ class TaskDetailViewController: UIViewController {
     }
     
     func didTapDelete() {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
         if let taskToDelete = task {
             context.delete(taskToDelete)
         }
@@ -100,7 +111,17 @@ class TaskDetailViewController: UIViewController {
     }
     
     @IBAction func didTapFinishTask(_ sender: UIButton) {
+        task?.isFinished = !(task?.isFinished ?? true)
         
+        // Save it to the database
+        do {
+            try context.save()
+        } catch {
+            
+        }
+        
+        delegate?.passOnEdit()
+        navigationController?.popViewController(animated: true)
     }
 }
 
