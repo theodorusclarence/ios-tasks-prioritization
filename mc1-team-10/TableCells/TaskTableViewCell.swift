@@ -12,6 +12,31 @@ class TaskTableViewCell: UITableViewCell {
 
     @IBOutlet weak var taskName: UILabel!
     @IBOutlet weak var dueDate: UILabel!
+    @IBOutlet weak var difficulty: UILabel!
+    @IBOutlet weak var difficultyWrapper: UIView!
+    
+    
+    func setup(_ task: TaskItem) {
+        taskName.text = task.taskName
+        dueDate.text = (task.dueDate != nil) ? DateHelper().getStringDate(task.dueDate!) : ""
+        difficulty.text = task.difficulty
+        
+        let difficultyEnum = Difficulty(rawValue: difficulty.text ?? "easy")
+        difficultyWrapper.layer.cornerRadius = 9
+        difficultyWrapper.layer.masksToBounds = true
+        
+        if difficultyEnum == .hard {
+            difficultyWrapper.backgroundColor = UIColor(red: 0.01, green: 0.52, blue: 0.78, alpha: 1.00)
+            difficulty.textColor = UIColor(red: 0.88, green: 0.95, blue: 1.00, alpha: 1.00)
+        } else if difficultyEnum == .medium {
+            difficultyWrapper.backgroundColor = UIColor(red: 0.88, green: 0.95, blue: 1.00, alpha: 1.00)
+            difficulty.textColor = UIColor(red: 0.05, green: 0.29, blue: 0.43, alpha: 1.00)
+        } else {
+            difficultyWrapper.backgroundColor = UIColor(red: 0.89, green: 0.99, blue: 1.00, alpha: 1.00)
+            difficulty.textColor = UIColor(red: 0.05, green: 0.20, blue: 0.26, alpha: 1.00)
+        }
+    }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,8 +47,6 @@ class TaskTableViewCell: UITableViewCell {
         
         // Set focus style to have corner radius
         self.layer.cornerRadius = 8
-        
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

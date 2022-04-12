@@ -105,8 +105,7 @@ extension MyTaskViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Task", for: indexPath) as! TaskTableViewCell
         
         let task = filteredTasks[indexPath.row]
-        cell.taskName.text = task.taskName
-        cell.dueDate.text = (task.dueDate != nil) ? DateHelper().getStringDate(task.dueDate!) : ""
+        cell.setup(task)
         
         return cell
     }
