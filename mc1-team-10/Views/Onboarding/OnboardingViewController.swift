@@ -42,7 +42,7 @@ class OnboardingViewController: UIViewController {
         continueButton.isHidden = true
 
         slides = [
-            OnboardingSlide(title: "Welcome to AppName", description: "App Name is an app designed for programmers to stay productive.", image: #imageLiteral(resourceName: "onboarding-1")) ,
+            OnboardingSlide(title: "Welcome to TaskIt", description: "App Name is an app designed for programmers to stay productive.", image: #imageLiteral(resourceName: "onboarding-1")) ,
             OnboardingSlide(title: "List your tasks", description: "You can write as many tasks as you want and provide its details like difficulty and deadlines.", image: #imageLiteral(resourceName: "onboarding-2")),
             OnboardingSlide(title: "Work with 1-3-5 Rule", description: "We recommend for you to complete 1 hard task, 3 medium task, and 5 easy tasks per day to stay productive without feeling burned out.", image: #imageLiteral(resourceName: "onboarding-3"))
         ]

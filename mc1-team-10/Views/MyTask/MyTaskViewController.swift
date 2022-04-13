@@ -34,8 +34,7 @@ class MyTaskViewController: UIViewController {
         navbarTitle.font = UIFont.systemFont(ofSize: 34, weight: .bold)
         navbarTitle.text = "My Tasks"
         
-        
-        
+        tabBarController?.tabBar.isHidden = false
     }
     
     @IBAction func addButtonClicked(_ sender: Any) {

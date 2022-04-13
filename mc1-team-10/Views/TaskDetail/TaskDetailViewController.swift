@@ -75,6 +75,11 @@ class TaskDetailViewController: UIViewController {
         updateContents()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+           super.viewWillDisappear(animated)
+           self.tabBarController?.tabBar.isHidden = false
+        }
+    
     func updateContents() {
         taskNameLabel.text = task?.taskName ?? "Task Name"
         statusLabel.text = task?.status?.capitalized ?? "Status"
